@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace POC.Presentation.Api
+namespace POC.Application.Api
 {
     public class Program
     {
