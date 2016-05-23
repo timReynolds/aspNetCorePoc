@@ -14,6 +14,7 @@ namespace POC.Infrastructure.EntityFramework
         }
 
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Team> Teams { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -41,16 +41,16 @@ namespace POC.Presentation.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            container.Options.DefaultScopedLifestyle = new AspNetRequestLifestyle();
+            //container.Options.DefaultScopedLifestyle = new AspNetRequestLifestyle();
 
-            app.UseSimpleInjectorAspNetRequestScoping(container);
+            //app.UseSimpleInjectorAspNetRequestScoping(container);
 
-            InitializeContainer(app);
+            //InitializeContainer(app);
 
-            container.RegisterAspNetControllers(app);
-            container.RegisterAspNetViewComponents(app);
+            //container.RegisterAspNetControllers(app);
+            //container.RegisterAspNetViewComponents(app);
 
-            container.Verify();
+            //container.Verify();
 
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
