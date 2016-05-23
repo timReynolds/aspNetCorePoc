@@ -4,11 +4,11 @@ using POC.Application.Providers;
 
 namespace POC.Infrastructure.EntityFramework
 {
-    public class PocDbContext : DbContext
+    public class DbContext : DbContext, IDbContext
     {
         private readonly IDbConfigurationProvider _configurationProvider;
 
-        public PocDbContext(IDbConfigurationProvider configurationProvider)
+        public DbContext(IDbConfigurationProvider configurationProvider)
         {
             _configurationProvider = configurationProvider;
         }
@@ -18,7 +18,6 @@ namespace POC.Infrastructure.EntityFramework
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
             optionsBuilder.UseSqlServer(_configurationProvider.DatabaseConnectionString);
         }
     }

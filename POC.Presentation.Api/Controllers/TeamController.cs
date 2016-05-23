@@ -4,13 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 namespace POC.Presentation.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class TeamController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public TeamController()
         {
-            return new[] { "value1", "value2" };
+                
+        }
+
+        [HttpGet]
+        public IEnumerable<Team> Get()
+        {
+            return new List<Team>();
         }
 
         // GET api/values/5
